@@ -1,10 +1,13 @@
 <template>
-	<div class="" v-if="!isLoading">
+	<div v-if="isLoading">
+		<Loading />
+	</div>
+	<div class="" v-else>
 		<h3 class="text-primary cursor-pointer hover:text-green-700" @click="router.push('/products')">
 			<i class="bi bi-chevron-left mr-3"></i>Back to Products
 		</h3>
 
-		<div class="grid grid-cols-2 gap-8 mt-8">
+		<div class="grid lg:grid-cols-2 gap-8 mt-8">
 			<div class="">
 				<div class="overflow-hidden bg-imagebg rounded-xl shadow-lg h-[60vh] group p-4"><img
 						:src="data.image"
@@ -14,7 +17,7 @@
 			</div>
 
 			<div class="">
-				<p class="text-3xl font-bold">{{ data.title }}</p>
+				<p class="text-xl lg:text-3xl font-bold">{{ data.title }}</p>
 				<p class="text-[#facc15] mt-3"><i class="bi bi-star-fill"
 						v-for="n in Math.floor(data.rating.rate)" :key="n"></i><i
 						class="bi bi-star-fill"
@@ -24,7 +27,7 @@
 						:key="n"></i>
 					<span class="text-textmuted ml-3">({{ data.rating.count }} reviews)</span>
 				</p>
-				<p class="text-3xl text-primary font-bold my-8">${{ data.price }} <span
+				<p class="text-xl lg:text-3xl text-primary font-bold my-8">${{ data.price }} <span
 						class="text-textmuted text-sm font-normal">+ Free Shipping</span></p>
 
 				<p class="font-medium text-lg">Description</p>
@@ -96,7 +99,7 @@ import { CartStore } from "../stores/cart.js"
 import { FavouriteStore } from "../stores/favourite.js"
 import { useRouter } from 'vue-router';
 import { useToast } from 'vue-toast-notification';
-
+import Loading from '../components/loading.vue'
 const toast = useToast();
 const router = useRouter();
 let isLoading = ref(true)

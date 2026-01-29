@@ -14,9 +14,9 @@
 					class="px-6 py-2 rounded-lg shadow-lg hover:-translate-y-0.5 bg-primary text-white font-medium cursor-pointer transition duration-300">Brouse
 					Products</button></p>
 		</div>
-		<div class="grid grid-cols-3 gap-6" v-else>
+		<div class="grid lg:grid-cols-3 gap-6" v-else>
 
-			<div class="col-span-2">
+			<div class="lg:col-span-2">
 				<div class="rounded-xl bg-bgsecondary shadow-sm p-4 flex gap-4 mb-4 relative"
 					v-for="x in cart.cart" :key="x">
 
@@ -58,7 +58,7 @@
 			</div>
 
 
-			<div class="col bg-bgsecondary p-6 rounded-xl h-fit">
+			<div class="col bg-bgsecondary p-6 rounded-xl h-fit w-full">
 				<h1 class="text-lg font-bold">Order Summery</h1>
 
 				<ul class="grid gap-3 mt-6">

@@ -15,8 +15,10 @@
 		<div class="p-5 ">
 
 			<div class="flex gap-2">
-				<p class="flex-1 font-bold hover:text-primary cursor-pointer line-clamp-2">{{ data.title
-				}}</p>
+				<p class="flex-1 font-bold hover:text-primary cursor-pointer line-clamp-2"
+					@click="router.push({ name: 'product_details', params: { product_id: data.id } })">
+					{{ data.title
+					}}</p>
 				<div class="">
 					<p class="text-primary font-bold text-lg text-end">{{ data.price }}$</p>
 					<p class="text-textmuted text-sm text-end line-through">${{

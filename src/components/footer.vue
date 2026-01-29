@@ -1,9 +1,9 @@
 <template>
-	<div class="bg-bottomnav p-8 grid grid-cols-4 gap-x-10 gap-y-4">
+	<div class="bg-bottomnav p-4 lg:p-8 grid lg:grid-cols-4 gap-x-10 ">
 
-		<p class="text-white font-bold text-lg" v-for="x in headings" :key="x">{{ x }}</p>
-
-		<div class="text-textmuted font-medium">
+		<!-- const headings = ['BD Funnel Builder', 'Quick Links', 'Support', 'Newsletter'] -->
+		<div class="text-textmuted font-medium mb-6">
+			<p class="text-white font-bold text-lg mb-4">BD Funnel Builder</p>
 			<p> Your trusted e-commerce platform for seamless shopping
 				experiences.</p>
 			<div class="flex space-x-4 mt-3"><a href="#"
@@ -30,17 +30,26 @@
 					</svg></a></div>
 		</div>
 
-		<ul class="text-textmuted font-medium list-disc pl-5 ">
-			<li class="mb-1 cursor-pointer hover:text-white transition-all duration-300"
-				v-for="x in quick_links" :key="x">{{ x }}</li>
-		</ul>
+		<div class="mb-6">
+			<p class="text-white font-bold text-lg mb-4">Quick Links</p>
+			<ul class="text-textmuted font-medium list-disc pl-5 ">
+				<li class="mb-1 cursor-pointer hover:text-white transition-all duration-300"
+					v-for="x in quick_links" :key="x">{{ x }}</li>
+			</ul>
+		</div>
 
-		<ul class="text-textmuted font-medium list-disc pl-5">
-			<li class="mb-1 cursor-pointer hover:text-white transition-all duration-300"
-				v-for="x in support" :key="x">{{ x }}</li>
-		</ul>
+		<div class="mb-6">
+			<p class="text-white font-bold text-lg mb-4">Support</p>
+			<ul class="text-textmuted font-medium list-disc pl-5">
+				<li class="mb-1 cursor-pointer hover:text-white transition-all duration-300"
+					v-for="x in support" :key="x">{{ x }}</li>
+			</ul>
+		</div>
 
-		<div class="">
+
+
+		<div class="mb-6">
+			<p class="text-white font-bold text-lg mb-4">Newsletter</p>
 			<p class="text-textmuted font-medium">Subscribe to get updates on new products and offers</p>
 			<input type="email"
 				class="px-4 py-2 rounded-lg bg-white/10 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary w-full mt-4 text-white"
@@ -49,7 +58,8 @@
 				class="rounded-lg bg-primary hover:-translate-y-0.5 py-2 font-medium text-white w-full mt-4 cursor-pointer">Subscribe</button>
 		</div>
 
-		<p class="text-textmuted font-medium text-sm mt-10">© 2023 BD Funnel Builder. All rights reserved.</p>
+		<p class="text-textmuted font-medium text-sm mt-10 text-center">© 2023 BD Funnel Builder. All rights
+			reserved.</p>
 		<p></p>
 		<p></p>
 		<div class="mt-10">

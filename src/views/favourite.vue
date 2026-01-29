@@ -1,7 +1,7 @@
 <template>
 	<div class="">
 		<div class="flex justify-between">
-			<h1 class="text-3xl font-bold">❤ Your Favourite</h1>
+			<h1 class="text-xl lg:text-3xl font-bold">❤ Your Favourite</h1>
 			<h3 class="text-primary cursor-pointer hover:text-green-700" @click="router.push('/products')">
 				<i class="bi bi-chevron-left mr-3"></i>Continue Shopping
 			</h3>
@@ -15,7 +15,7 @@
 					Products</button></p>
 		</div>
 
-		<div class="grid grid-cols-4 gap-8 my-8">
+		<div class="grid lg:grid-cols-4 gap-8 my-8">
 			<div class="rounded-xl shadow-lg group hover:shadow-2xl bg-bgsecondary h-90 relative transition duration-500 overflow-hidden"
 				v-for="x in favourite.favourite" :key="x">
 

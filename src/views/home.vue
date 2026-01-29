@@ -6,28 +6,30 @@
 				Investigate Buy & Repeat</h3>
 		</div>
 
-		<div class="grid grid-cols-2 gap-12">
+		<div class="grid lg:grid-cols-2 gap-12">
 			<div class="">
-				<div class="text-6xl font-bold uppercase transition">
+				<div class="text-4xl lg:text-6xl font-bold uppercase transition">
 					<h1 class="hover:scale-104 duration-500">your trusted</h1>
 					<h1
 						class="hover:scale-104 duration-500 bg-linear-to-r from-primary to-blue-600 text-transparent bg-clip-text">
 						ecommerce</h1>
 					<h1 class="hover:scale-104 duration-500">plartform</h1>
 				</div>
-				<p class="mt-10 text-muted text-xl">Explore our curated collection of categories
+				<p class="mt-10 text-textmuted text-lg lg:text-xl">Explore our curated collection of
+					categories
 					tailored to
 					meet
 					your
 					every need. From fashion and electronics to home essentials, we have it all
 					under one
 					roof.</p>
-				<p class="mt-10 text-muted text-xl">Don't miss out on exclusive deals and seasonal
+				<p class="mt-10 text-textmuted text-lg lg:text-xl">Don't miss out on exclusive deals and
+					seasonal
 					discounts
 					featured right at the top! Save big with our handpicked offers and daily deals.
 				</p>
 
-				<p class="mt-10 text-muted text-xl"><button
+				<p class="mt-10 text-textmuted text-lg lg:text-xl"><button
 						class="rounded-lg bg-primary hover:-translate-y-0.5 py-2 font-medium text-white px-10 mt-4 cursor-pointer"
 						@click="router.push('/products')">Shop
 						Now</button>
@@ -43,17 +45,19 @@
 								alt="google-logo"
 								class="h-12 object-contain grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transform hover:scale-110 transition-all duration-300"></a>
 					</div>
-					<div><a href="https://www.facebook.com/share/16Wwm5B7Bj/?mibextid=wwXIfr"><img
+					<div class="flex justify-center"><a
+							href="https://www.facebook.com/share/16Wwm5B7Bj/?mibextid=wwXIfr"><img
 								src="https://readymadeui.com/facebook-logo.svg"
 								alt="facebook-logo"
 								class="h-12 object-contain grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transform hover:scale-110 transition-all duration-300"></a>
 					</div>
-					<div><a href="https://www.linkedin.com/in/sheikh-sahed-hasan-556b77312/"><img
+					<div class="flex justify-center"><a
+							href="https://www.linkedin.com/in/sheikh-sahed-hasan-556b77312/"><img
 								src="https://readymadeui.com/linkedin-logo.svg"
 								alt="linkedin-logo"
 								class="h-12 object-contain grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transform hover:scale-110 transition-all duration-300"></a>
 					</div>
-					<div><a href="https://www.pinterest.com"><img
+					<div class="flex justify-center"><a href="https://www.pinterest.com"><img
 								src="https://readymadeui.com/pinterest-logo.svg"
 								alt="pinterest-logo"
 								class="h-12 object-contain grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transform hover:scale-110 transition-all duration-300"></a>
