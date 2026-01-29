@@ -1,6 +1,8 @@
 import { defineStore } from "pinia";
 import { computed, onBeforeMount, onBeforeUnmount, ref, watch } from "vue";
+import { useToast } from "vue-toast-notification";
 
+const toast = useToast();
 export const CartStore = defineStore("user_cart", () => {
         const cart = ref([]);
         const shipping = ref(2.0);
@@ -15,12 +17,14 @@ export const CartStore = defineStore("user_cart", () => {
                 } else {
                         cart.value[index].count++;
                 }
+                toast.success("Product added to cart");
         }
 
         function removeFromCart(data) {
                 const index = cart.value.findIndex((p) => p.id === data.id);
                 if (index != -1) {
                         cart.value.splice(index, 1);
+                        toast.error("Product removed from cart");
                 }
         }
 

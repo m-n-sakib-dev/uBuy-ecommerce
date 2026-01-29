@@ -53,9 +53,11 @@ import { CartStore } from "../stores/cart.js"
 import { FavouriteStore } from "../stores/favourite.js"
 import { useRouter } from 'vue-router';
 
+import { useToast } from 'vue-toast-notification';
+
+const toast = useToast();
 
 const router = useRouter();
-
 const cart = CartStore();
 const favourite = FavouriteStore();
 const props = defineProps({
@@ -76,6 +78,7 @@ function mainPrice(price) {
 function addToCart(product) {
 	product.count = 1
 	cart.addtocart(product)
+
 }
 function toggleFavourite(data) {
 	if (!isFavourite(data)) addToFavourite(data)
@@ -84,10 +87,12 @@ function toggleFavourite(data) {
 
 function addToFavourite(product) {
 	favourite.addtofavourite(product)
+
 }
 
 function removeFromFavourite(x) {
 	favourite.removeFromFavourite(x)
+
 }
 
 function floorRating(x) {

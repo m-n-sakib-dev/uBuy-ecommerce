@@ -95,8 +95,9 @@ import { defineProps, onBeforeMount, onMounted, ref } from 'vue';
 import { CartStore } from "../stores/cart.js"
 import { FavouriteStore } from "../stores/favourite.js"
 import { useRouter } from 'vue-router';
+import { useToast } from 'vue-toast-notification';
 
-
+const toast = useToast();
 const router = useRouter();
 let isLoading = ref(true)
 const cart = CartStore();
@@ -125,6 +126,7 @@ function isFavourite(x) {
 function addToCart(product) {
 	product.count = 1
 	cart.addtocart(product)
+
 }
 function toggleFavourite(data) {
 	if (!isFavourite(data)) addToFavourite(data)
@@ -133,10 +135,12 @@ function toggleFavourite(data) {
 
 function addToFavourite(product) {
 	favourite.addtofavourite(product)
+
 }
 
 function removeFromFavourite(x) {
 	favourite.removeFromFavourite(x)
+
 }
 
 function floorRating(x) {
