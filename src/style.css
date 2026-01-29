@@ -1,0 +1,13 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import "tailwindcss";
+
+@theme {
+        --color-primary: rgb(30, 186, 88);
+        --color-textmuted: rgb(107, 114, 128);
+        --color-bottomnav: rgb(26, 35, 50);
+        --color-bgprimary: rgb(214, 226, 218);
+        --color-imagebg: rgb(239, 250, 251);
+        --color-bgsecondary: #ffffff;
+        --color-topnavbar: rgb(1, 1, 1, 0.85);
+}
+@variant hover (&:hover);
