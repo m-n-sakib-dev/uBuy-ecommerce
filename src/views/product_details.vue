@@ -3,7 +3,7 @@
 		<Loading />
 	</div>
 	<div class="" v-else>
-		<h3 class="text-primary cursor-pointer hover:text-green-700" @click="router.push('/products')">
+		<h3 class="text-primary cursor-pointer hover:text-green-700 w-fit" @click="router.push('/products')">
 			<i class="bi bi-chevron-left mr-3"></i>Back to Products
 		</h3>
 

@@ -9,7 +9,8 @@
 
 		<div class="overflow-hidden h-[60%] group-hover:bg-amber-50 cursor-pointer"
 			@click="router.push({ name: 'product_details', params: { product_id: data.id } })">
-			<img :src="data.image" class="w-full h-full object-contain group-hover:scale-110 duration-700">
+			<img :src="data.image"
+				class="w-full h-full object-contain group-hover:scale-110 duration-700 p-4">
 		</div>
 
 		<div class="p-5 ">
